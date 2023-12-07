@@ -2,8 +2,11 @@ const e = require("express")
 const morgan = require("morgan")
 const express = require("express")
 const app = express()
+const cors = require("cors")
 
 app.use(express.json())
+app.use(cors())
+app.use(express.static('dist'))
 morgan.token("body", function getBody(req) {
     return JSON.stringify(req.body)
 })
@@ -62,6 +65,7 @@ app.delete('/api/persons/:id', (request, response) => {
 
 app.post("/api/persons", (request, response) => {
     const body = request.body
+    console.log(body)
     const id = Math.round(Math.random() *10** 10)
     if(!body.name) {
         return response.status(400).json({
