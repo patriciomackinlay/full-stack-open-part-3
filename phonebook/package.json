@@ -10,7 +10,6 @@
   },
   "repository": {
     "type": "git",
-
     "url": "git+ssh://git@github.com/patriciomackinlay/full-stack-open-part-3.git"
   },
   "author": "Patricio Mackinlay",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/patriciomackinlay/full-stack-open-part-3",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   }
 }
