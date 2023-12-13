@@ -1,0 +1,32 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/patriciomackinlay/full-stack-open-part-3.git"
+  },
+  "author": "Patricio Mackinlay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patriciomackinlay/full-stack-open-part-3/issues"
+  },
+  "homepage": "https://github.com/patriciomackinlay/full-stack-open-part-3",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
